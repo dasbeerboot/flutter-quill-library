@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:html_editor/html_editor.dart';
 
 void main() {
   runApp(MyApp());
 }
 
+GlobalKey<HtmlEditorState> keyEditor = GlobalKey();
+
 class MyApp extends StatelessWidget {
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -30,13 +34,16 @@ class MyApp extends StatelessWidget {
         title: Text("Let's get it started")
       ),
         body: Center(
-          child: Text("Hello World!")
+          child: HtmlEditor (
+            hint: "html editor example",
+            key: keyEditor,
+            height: 400
+          )
         )
       )
     );
   }
 }
-
 // class MyHomePage extends StatefulWidget {
 //   MyHomePage({Key key, this.title}) : super(key: key);
 
