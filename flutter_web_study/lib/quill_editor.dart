@@ -1,0 +1,2 @@
+// @JS('Quill')
+// library quill
