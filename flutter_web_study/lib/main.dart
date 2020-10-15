@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'quill_editor.dart';
+import 'web_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,8 +24,14 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: FlatButton(
-          child: Text("Open quill editor"),
-          onPressed: () {},
+          child: Text("Open Quill Editor"),
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => MyWebView(
+                      title: "Quill Editor WebView",
+                      selectedUrl: "https://dasbeerboot.github.io/wysiwyg-editor-examples/subpages/quill.html",
+                    )));
+          },
         ),
       ),
     );
