@@ -3,6 +3,10 @@
 A new Flutter project.
 
 ## 진행상황
+### 15/10/2020
+* WebView 위젯 실행 및 url호출시 Unsupported operation 에러남 => flutter web에서는 WebView 대신 htmlElemnt widget을 사용해야한다고..
+
+
 ### 14/10/2020 
   * CDN 으로 web/index.html 에 integration => 연결문제로 안하기로함
   * import_js_library(https://pub.dev/packages/import_js_library) => 하루종일 실패중
