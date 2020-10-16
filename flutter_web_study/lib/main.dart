@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Easy Web View',
+      title: 'Quill editor example',
       theme: ThemeData.light(),
       home: HomeScreen(),
       debugShowCheckedModeBanner: false,

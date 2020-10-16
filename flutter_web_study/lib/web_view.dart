@@ -7,7 +7,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  String src = 'https://flutter.dev';
+  String src = 'https://dasbeerboot.github.io/wysiwyg-editor-examples/subpages/quill.html';
   String src2 = 'https://flutter.dev/community';
   String src3 = 'http://www.youtube.com/embed/IyFZznAk69U';
   static ValueKey key = ValueKey('key_0');
@@ -128,21 +128,21 @@ class _HomeScreenState extends State<HomeScreen> {
                               // width: 100,
                               // height: 100,
                               )),
-                      Expanded(
-                        flex: 1,
-                        child: EasyWebView(
-                            onLoaded: () {
-                              print('$key2: Loaded: $src2');
-                            },
-                            src: src2,
-                            isHtml: _isHtml,
-                            isMarkdown: _isMarkdown,
-                            convertToWidgets: _useWidgets,
-                            key: key2
-                            // width: 100,
-                            // height: 100,
-                            ),
-                      ),
+                      // Expanded(
+                      //   flex: 1,
+                      //   child: EasyWebView(
+                      //       onLoaded: () {
+                      //         print('$key2: Loaded: $src2');
+                      //       },
+                      //       src: src2,
+                      //       isHtml: _isHtml,
+                      //       isMarkdown: _isMarkdown,
+                      //       convertToWidgets: _useWidgets,
+                      //       key: key2
+                      //       // width: 100,
+                      //       // height: 100,
+                      //       ),
+                      // ),
                     ],
                   ),
                   Column(
@@ -178,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Quill Editor</title>
 </head>
 <body>
 <h1>This is a Heading</h1>
@@ -205,69 +205,3 @@ This is a paragraph
 
   String get url => 'https://flutter.dev';
 }
-
-
-// import 'dart:async';
-// import 'package:flutter/material.dart';
-// import 'package:webview_flutter/webview_flutter.dart';
-// import 'package:easy_web_view/easy_web_view.dart';
-
-// class MyWebView extends StatelessWidget {
-//   final String title;
-//   final String selectedUrl;
-
-//   final Completer<WebViewController> _controller =
-//       Completer<WebViewController>();
-
-//   MyWebView({
-//     @required this.title,
-//     @required this.selectedUrl,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//         appBar: AppBar(
-//           title: Text(title),
-//         ),
-//         body: WebView(
-//           initialUrl: selectedUrl,
-//           javascriptMode: JavascriptMode.unrestricted,
-//           onWebViewCreated: (WebViewController webViewController) {
-//             _controller.complete(webViewController);
-//           },
-//         ));
-//   }
-// }
-
-// import 'dart:async';
-// import 'package:flutter/material.dart';
-// import 'package:webview_flutter/webview_flutter.dart';
-
-// class MyWebView extends StatelessWidget {
-//   final String title;
-//   final String selectedUrl;
-
-//   final Completer<WebViewController> _controller =
-//       Completer<WebViewController>();
-
-//   MyWebView({
-//     @required this.title,
-//     @required this.selectedUrl,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//         appBar: AppBar(
-//           title: Text(title),
-//         ),
-//         body: WebView(
-//           initialUrl: selectedUrl,
-//           javascriptMode: JavascriptMode.unrestricted,
-//           onWebViewCreated: (WebViewController webViewController) {
-//             _controller.complete(webViewController);
-//           },
-//         ));
-//   }
-// }
