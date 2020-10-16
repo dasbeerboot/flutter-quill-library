@@ -3,6 +3,10 @@
 A new Flutter project.
 
 ## 진행상황
+### 16/10/2020
+```easy_web_view``` 사용해서 웹뷰 띄우기 성공
+
+
 ### 15/10/2020
 * WebView 위젯 실행 및 url호출시 Unsupported operation 에러남 => flutter web에서는 WebView 대신 htmlElemnt widget을 사용해야한다고..
 
