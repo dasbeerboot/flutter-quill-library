@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## 진행상황
 ### 16/10/2020
-```easy_web_view``` 사용해서 웹뷰 띄우기 성공
+* ```easy_web_view``` 사용해서 웹뷰 띄우기 성공
 
 
 ### 15/10/2020
