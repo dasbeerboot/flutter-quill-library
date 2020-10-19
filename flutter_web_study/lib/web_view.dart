@@ -1,9 +1,16 @@
+import 'dart:async';
+
 import 'package:easy_web_view/easy_web_view.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter/material.dart';
 
 
 class HomeScreen extends StatelessWidget {
+
+  // final Completer<WebViewController> _controller = Completer<WebViewController>();
+  WebViewController _controller;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,6 +21,13 @@ class HomeScreen extends StatelessWidget {
         child: WebView(
           initialUrl: "https://dasbeerboot.github.io/wysiwyg-editor-examples/subpages/quill.html",
           javascriptMode: JavascriptMode.unrestricted,
+          onWebViewCreated: (WebViewController webViewController) {
+            String quillHTML = '';
+            webViewController.evaluateJavascript(
+              "function test () {return document.getElementById('result-area')} test()"
+            ).then((result) => quillHTML = result);
+            print("result ???? " + quillHTML);
+          },
         ),
       )
     );
